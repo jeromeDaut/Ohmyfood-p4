@@ -1,0 +1,59 @@
+// restaurants cards & news
+.card-container{
+    border-radius: map-get($radius-btn, index-btn);
+    @include box-shadow; 
+    width: 100%;
+    transition: $transition-btn;
+        img {
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+            height: 174px;
+            width: 100%;
+        }
+        &:hover{
+            transform: scale(1.01);
+            transition: 500ms;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+}
+
+.card-bottom-container{
+    display: flex;
+}
+
+.card-texts{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+        h2 {
+            margin: 5px;
+            font-size: 18px;
+        }
+        p{
+            margin: 5px;
+        }
+}
+
+.card-new{
+    position: absolute;
+    right: 10%;
+
+    z-index: 1;
+
+    border: 1px solid $color-font-news;
+    background: $color-background-new;
+    color: $color-font-news;
+
+    width: 25%;
+    max-width: 150px;
+    min-width: 70px;
+    height: 29px;
+
+    padding: 13px 5px 5px 5px;  
+    margin-bottom: 50px;
+}
+.card-new-two{
+    margin-bottom: 145px;
+}   

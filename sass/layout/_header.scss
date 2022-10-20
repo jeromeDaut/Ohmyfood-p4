@@ -1,0 +1,10 @@
+// header index
+h1{
+    @include font-logo-ohmyfood;
+    font-size: map-get($font-size, main-titles);
+    @extend %flex-center-column;
+    width: 100%;
+}
+header{
+    width: 100%;    
+}

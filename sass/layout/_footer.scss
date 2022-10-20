@@ -1,0 +1,44 @@
+// footer
+
+footer{
+    width: 100%;
+    height: 197px;
+    background: $color-footer;
+    color: $white;
+}
+        
+.footer-title{
+    @include font-logo-ohmyfood;
+    font-size: map-get($font-size, tertiary-titles);
+    margin-top: 0;
+    margin-left: 40px;
+    padding-top: 22px;
+}
+.footer-list-container{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+       
+}
+.footer_list-items{
+    margin-bottom: 7px;
+        i{
+            font-size: 13px;
+            margin-right: 11px;
+        }
+        &:hover{
+            color: $color-secondary;
+        }          
+}
+.fa-utensils{
+    padding-right: 5px;
+}
+.footer-link{
+    color: $white;
+        &:hover{
+            background:linear-gradient(to left, $color-primary, lighten($color-primary, 5%), $color-secondary, lighten($color-secondary, 5%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+}

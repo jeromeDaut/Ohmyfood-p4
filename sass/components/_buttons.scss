@@ -1,0 +1,61 @@
+// xxxxxxxxxxxxx
+// button main 
+// xxxxxxxxxxxxx
+.btn-main{
+    @include btn-main;
+        &:hover{
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            transition-duration: $transition-btn;
+        }
+}
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// buttons functioning & numbers
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.btn-functioning{
+    @include btn-functioning;
+        &:hover{
+            background: $color-bg-functionning;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);;
+            transition-duration: $transition-btn;
+                i{
+                    color: $color-primary;
+                }            
+        }
+
+}
+.logo__functioning{
+    &--phone{
+        margin-right: 25px;
+    }
+    &--list{
+        margin-right: 35px;
+    }
+    &--shop{
+        margin-right: 30px;
+    }
+}
+.number{
+    @extend %flex-center-row;
+    z-index: 1;
+    position: relative;
+    top: 50px;
+    right: 12px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: $color-primary;
+    color: $white;
+        
+}
+
+// xxxxxxxx
+// hearts
+// xxxxxxxx
+.fa-heart{
+    cursor: pointer;
+        &:hover::before{
+            @include heart-hover;
+        }
+}

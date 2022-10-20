@@ -1,0 +1,40 @@
+
+@mixin box-shadow {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+@mixin font-logo-ohmyfood{
+    font-family: Shrikhand, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+@mixin btn-main {
+    @include box-shadow;
+    @extend %flex-center-column;
+    border-radius: map-get($radius-btn, main-btn);
+    background: linear-gradient($color-secondary, $color-primary);
+    width: 50%;
+    // width: 218px;
+    height: 50px;
+    transition-duration: $transition-btn;
+}
+
+@mixin btn-functioning {
+    @include box-shadow;
+    @extend %flex-center-row; 
+    border-radius: map-get($radius-btn, index-btn);
+    width: 100%;
+    height: 72px;
+    background: $color-background;
+    transition-duration: $transition-btn;
+}
+
+@mixin heart-hover {
+    animation: progress-color-heart $transition-btn;
+    display: inline-block;
+    background: linear-gradient(to top, $color-primary, lighten($color-primary, 5%), $color-secondary, lighten($color-secondary, 5%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: $color-primary 0px 0px 18px;
+}

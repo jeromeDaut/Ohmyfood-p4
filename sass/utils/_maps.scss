@@ -1,0 +1,19 @@
+$font-size:(
+    main-titles:        30px, /*font-size: map-get($font-size, main-titles);*/
+    secondary-titles:   24px, /*font-size: map-get($font-size, secondary-title);*/
+    tertiary-titles:    18px, /*font-size: map-get($font-size, tertiary-titles);*/
+    texts:              17px, /*font-size: map-get($font-size, texts-titles);*/
+    logos:              20px, /*font-size: map-get($font-size, logos-titles);*/
+);
+
+$breakpoints:(
+    mobile:   599px, /*breakpoints: map-get($breakpoints, mobile);*/
+    tablet:   768px, /*breakpoints: map-get($breakpoints, tablet);*/
+    desktop:  992px, /*breakpoints: map-get($breakpoints, desktop);*/
+);
+
+$radius-btn:(
+    main-btn: 25px, /*radius-btn: map-get($radius-btn, ..);*/
+    index-btn:20px,
+    cards-btn:15px,
+);
