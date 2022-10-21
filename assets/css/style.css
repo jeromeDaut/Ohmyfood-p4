@@ -1,4 +1,4 @@
-h1, .btn-main, .article-container, nav, .restaurants-menu a {
+h1, .btn-main, .article-container, .restaurants-menu a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,10 +74,30 @@ a {
 }
 
 nav {
-  padding: 20px;
+  padding: 25px;
 }
-nav h3 {
-  align-self: flex-start;
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 50px 50px 0 50px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20% 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-secondary {
+    position: relative;
+    bottom: -20px;
+    margin-bottom: 0px;
+    padding-right: 600px;
+  }
 }
 
 .functioning-container {
@@ -86,13 +106,29 @@ nav h3 {
   color: #353535;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .functioning-container {
+    margin: 3%;
+  }
+}
 
 .article-container {
   padding: 18px 20px 0 20px;
 }
+@media screen and (min-width: 768px) {
+  .article-container {
+    width: 340px;
+    justify-content: center;
+  }
+}
 .article-container h3 {
   align-self: flex-start;
   padding-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .article-container h3 {
+    position: absolute;
+  }
 }
 
 .card-heart {
@@ -105,11 +141,19 @@ nav h3 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .section-container {
+    display: flex;
+    margin-left: 20%;
+    justify-content: space-between;
+  }
+}
+
 .btn-main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
-  width: 50%;
+  width: 218px;
   height: 50px;
   transition-duration: 600ms;
 }
@@ -126,6 +170,14 @@ nav h3 {
   height: 72px;
   background: #F7F7F7;
   transition-duration: 600ms;
+}
+@media screen and (min-width: 768px) {
+  .btn-functioning {
+    max-width: 322px;
+    min-width: 100%;
+    white-space: nowrap;
+    padding-right: 5px;
+  }
 }
 .btn-functioning:hover {
   background: #F5EDFF;
@@ -144,6 +196,21 @@ nav h3 {
 }
 .logo__functioning--shop {
   margin-right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo__functioning--phone {
+    padding: 0 5px 0 15px;
+    margin-right: 0;
+  }
+  .logo__functioning--list {
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  .logo__functioning--shop {
+    margin-left: 15px;
+    margin-right: 5px;
+  }
 }
 
 .number {
@@ -177,6 +244,11 @@ nav h3 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   transition: 600ms;
+}
+@media screen and (min-width: 768px) {
+  .card-container {
+    width: 325px;
+  }
 }
 .card-container img {
   border-radius: 15px 15px 0 0;
