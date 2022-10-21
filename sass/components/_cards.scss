@@ -4,6 +4,10 @@
     @include box-shadow; 
     width: 100%;
     transition: $transition-btn;
+    @include breakpoints-tablet{
+        width: 325px;
+    }
+    
         img {
             border-radius: 15px 15px 0 0;
             object-fit: cover;

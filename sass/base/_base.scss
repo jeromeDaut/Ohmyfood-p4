@@ -6,6 +6,7 @@ body{
     padding: 0;
 }
 
+
 main{
     text-align: center;
     margin: 0;
@@ -53,17 +54,37 @@ a{
 // functioning
 // xxxxxxxxxxxxx
 nav{
-    @extend %flex-center-column;
-    padding: 20px;
-        h3{
-            align-self: flex-start;
-        }
+    padding: 25px;
+    @include breakpoints-tablet{
+        padding: 50px 50px 0 50px;
+        height: 200px;
+    }
+}
+.container{
+    @include breakpoints-tablet{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 20% 0;
+    }
+}
+.title-secondary{
+    @include breakpoints-tablet{
+        position: relative;
+        bottom: -20px;
+        margin-bottom: 0px;
+        padding-right: 600px;
+    }
+
 }
 .functioning-container{
     margin-bottom: 35px;
     text-decoration: none;
     color: $color-footer;
     width: 100%;
+    @include breakpoints-tablet{
+        margin: 3%;
+        
+    }
 }
 
 // xxxxxxxxxxxxx
@@ -72,11 +93,19 @@ nav{
 .article-container{
     @extend %flex-center-column;
     padding: 18px 20px 0 20px;
+    @include breakpoints-tablet{
+        // width: 45%;
+        width: 340px;
+        justify-content: center;
+        
+    }
     h3{
         align-self: flex-start;
         padding-top: 30px;
-    }
-    
+        @include breakpoints-tablet{
+            position: absolute;
+        }
+    }   
 }
 .card-heart{
     right: 5%;
@@ -87,4 +116,13 @@ nav{
     font-size: 21px;
     cursor: pointer;
 
+}
+.section-container{
+    @include breakpoints-tablet{
+    display: flex;
+    // padding: 50px;
+    margin-left: 20%;
+    justify-content: space-between;
+    // width: 100%;
+    }
 }
