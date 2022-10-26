@@ -36,10 +36,14 @@ body {
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  body {
+    min-width: auto;
+  }
+}
 
 main {
   text-align: center;
-  margin: 0;
 }
 
 section {
@@ -54,7 +58,6 @@ a {
 
 .localisation {
   background-color: #EAEAEA;
-  width: 100%;
 }
 .localisation i {
   margin-right: 20px;
@@ -68,69 +71,84 @@ a {
   margin-top: 0;
   padding-top: 39px;
 }
+@media screen and (min-width: 992px) {
+  .restaurants-menu h2 {
+    font-size: 35px;
+  }
+  .restaurants-menu h2 p {
+    font-size: 18px;
+  }
+}
 .restaurants-menu a {
-  text-decoration: none;
   color: #F7F7F7;
 }
 
-nav {
-  padding: 25px;
+.nav-container {
+  padding: 50px 20px 50px;
 }
 @media screen and (min-width: 768px) {
-  nav {
-    padding: 50px 50px 0 50px;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 20% 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .title-secondary {
+  .nav-container {
     position: relative;
-    bottom: -20px;
-    margin-bottom: 0px;
-    padding-right: 600px;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav-container {
+    padding: 50px 0;
+    align-items: center;
+    align-content: center;
   }
 }
 
-.functioning-container {
-  margin-bottom: 35px;
-  text-decoration: none;
-  color: #353535;
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
   .functioning-container {
-    margin: 3%;
+    margin: 0 15px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  .functioning-container {
+    margin: 10px 13px;
+    width: 300px;
   }
 }
 
-.article-container {
-  padding: 18px 20px 0 20px;
+.section-container {
+  padding: 18px 20px 40px 20px;
+  background-color: #F7F7F7;
 }
+@media screen and (min-width: 768px) {
+  .section-container {
+    display: flex;
+    position: relative;
+    padding: 50px 0 40px 0;
+    justify-content: center;
+    padding-top: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-container {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    align-items: center;
+    padding-left: 480px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .article-container {
-    width: 340px;
-    justify-content: center;
+    width: 330px;
+    margin: 20px;
+    border: 1px solid red;
+    position: relative;
   }
 }
-.article-container h3 {
-  align-self: flex-start;
-  padding-top: 30px;
-}
-@media screen and (min-width: 768px) {
-  .article-container h3 {
-    position: absolute;
-  }
-}
-
 .card-heart {
   right: 5%;
   width: 20%;
@@ -138,14 +156,34 @@ nav {
   justify-content: flex-end;
   padding-right: 20px;
   font-size: 21px;
-  cursor: pointer;
+}
+
+.title-secondary {
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .title-secondary {
+    position: absolute;
+    width: auto;
+    top: 1px;
+    margin-right: 580px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title-secondary {
+    margin-right: 780px;
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .section-container {
-    display: flex;
-    margin-left: 20%;
-    justify-content: space-between;
+  .title-restaurant {
+    margin-right: 610px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title-restaurant {
+    margin-right: 1290px;
   }
 }
 
@@ -170,13 +208,16 @@ nav {
   height: 72px;
   background: #F7F7F7;
   transition-duration: 600ms;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .btn-functioning {
-    max-width: 322px;
-    min-width: 100%;
     white-space: nowrap;
     padding-right: 5px;
+    transition-duration: 0ms;
+    position: relative;
   }
 }
 .btn-functioning:hover {
@@ -190,12 +231,15 @@ nav {
 
 .logo__functioning--phone {
   margin-right: 25px;
+  color: #7E7E7E;
 }
 .logo__functioning--list {
   margin-right: 35px;
+  color: #7E7E7E;
 }
 .logo__functioning--shop {
   margin-right: 30px;
+  color: #7E7E7E;
 }
 
 @media screen and (min-width: 768px) {
@@ -215,14 +259,20 @@ nav {
 
 .number {
   z-index: 1;
-  position: relative;
-  top: 50px;
+  position: absolute;
+  left: 8px;
+  margin-top: 23px;
   right: 12px;
   width: 25px;
   height: 25px;
   border-radius: 25px;
   background: #9356DC;
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .number {
+    left: -13px;
+  }
 }
 
 .fa-heart {
@@ -247,7 +297,14 @@ nav {
 }
 @media screen and (min-width: 768px) {
   .card-container {
-    width: 325px;
+    margin: 0;
+    max-width: 340px;
+    border: 1px solid blue;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card-container {
+    width: 320px;
   }
 }
 .card-container img {
@@ -257,13 +314,13 @@ nav {
   width: 100%;
 }
 .card-container:hover {
-  transform: scale(1.01);
   transition: 500ms;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .card-bottom-container {
   display: flex;
+  white-space: nowrap;
 }
 
 .card-texts {
@@ -284,7 +341,6 @@ nav {
 .card-new {
   position: absolute;
   right: 10%;
-  z-index: 1;
   border: 1px solid #008766;
   background: #99E2D0;
   color: #008766;
@@ -292,31 +348,34 @@ nav {
   max-width: 150px;
   min-width: 70px;
   height: 29px;
-  padding: 13px 5px 5px 5px;
-  margin-bottom: 50px;
+  padding: 12px 5px 5px 5px;
 }
-
-.card-new-two {
-  margin-bottom: 145px;
-}
-
 h1 {
   font-family: Shrikhand, sans-serif;
   font-style: italic;
   font-weight: normal;
   font-size: 30px;
-  width: 100%;
 }
-
-header {
-  width: 100%;
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 37px;
+  }
 }
 
 footer {
-  width: 100%;
+  width: auto;
   height: 197px;
   background: #353535;
   color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
 .footer-title {
@@ -328,15 +387,44 @@ footer {
   margin-left: 40px;
   padding-top: 22px;
 }
+@media screen and (min-width: 768px) {
+  .footer-title {
+    margin: 0 15px;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer-title {
+    margin: 0 25px;
+  }
+}
 
 .footer-list-container {
   list-style-type: none;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .footer-list-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+  }
+}
 
 .footer_list-items {
   margin-bottom: 7px;
+}
+@media screen and (min-width: 768px) {
+  .footer_list-items {
+    margin: 10px;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer_list-items {
+    margin-left: 35px;
+  }
 }
 .footer_list-items i {
   font-size: 13px;
