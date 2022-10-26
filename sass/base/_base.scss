@@ -4,12 +4,20 @@ body{
     font-size: map-get($font-size, texts);
     margin: 0;
     padding: 0;
+    @include breakpoints-tablet{
+        // max-width: 300%;
+        min-width: auto;
+    }
+    // min-width: none;
+    // min-width: 0;
+    
 }
 
 
 main{
     text-align: center;
-    margin: 0;
+    // margin: 0;
+   
 }
 section{
     background: $color-background;
@@ -27,7 +35,7 @@ a{
 .localisation{
     @extend %flex-center-row;
     background-color: #EAEAEA;
-    width: 100%;
+    // width: 100%;
         i{
             margin-right: 20px;
         }
@@ -43,69 +51,93 @@ a{
         h2{
             margin-top: 0;
             padding-top: 39px;
+                @include breakpoints-desktop{
+                    font-size: 35px;
+                    p{
+                        font-size: 18px;
+                    }
+                }
         }
         a{
             @extend %flex-center-column;
-            text-decoration: none;
+            // text-decoration: none;
             color: $color-background;
         }       
 }
-// xxxxxxxxxxxxx
-// functioning
-// xxxxxxxxxxxxx
-nav{
-    padding: 25px;
-    @include breakpoints-tablet{
-        padding: 50px 50px 0 50px;
-        height: 200px;
-    }
-}
-.container{
-    @include breakpoints-tablet{
-        display: flex;
-        justify-content: space-around;
-        margin: 0 20% 0;
-    }
-}
-.title-secondary{
-    @include breakpoints-tablet{
-        position: relative;
-        bottom: -20px;
-        margin-bottom: 0px;
-        padding-right: 600px;
-    }
+// xxxxxxxxxxxxxxxxxxxxxx
+// container functioning
+// xxxxxxxxxxxxxxxxxxxxxx
 
+.nav-container{
+    padding: 50px 20px 50px;
+        @include breakpoints-tablet{
+            position: relative;
+            display: flex;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+        }
+        @include breakpoints-desktop{
+            // padding: 0;
+            padding:50px  0;
+            align-items: center;
+            align-content: center;
+            // justify-content: space-around;
+            // width: 500px;
+            // font-size: 24px;
+        }
 }
+
 .functioning-container{
-    margin-bottom: 35px;
-    text-decoration: none;
-    color: $color-footer;
-    width: 100%;
+
     @include breakpoints-tablet{
-        margin: 3%;
-        
+        margin: 0 15px;
+        position: relative;
+    }
+    @include breakpoints-desktop{
+    // width: 280px;
+    margin: 10px 13px;
+    width: 300px;
     }
 }
 
 // xxxxxxxxxxxxx
 // container restaurant
 // xxxxxxxxxxxxx
+.section-container{
+    padding: 18px 20px 40px 20px;
+    background-color: $color-background;
+        @include breakpoints-tablet{
+        display: flex;
+        position: relative;
+        padding: 50px 0 40px 0;
+        justify-content: center;
+        padding-top: 50px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        // overflow: hidden;
+        } 
+        @include breakpoints-desktop{
+        flex-wrap: nowrap;
+        overflow: hidden;
+        align-items: center;
+        padding-left: 480px;
+    }
+}
 .article-container{
     @extend %flex-center-column;
-    padding: 18px 20px 0 20px;
+    // padding: 18px 20px 0 20px;
     @include breakpoints-tablet{
-        // width: 45%;
-        width: 340px;
-        justify-content: center;
-        
+        width: 330px;
+        margin: 20px;
+        border: 1px solid red;
+        position: relative;
     }
-    h3{
-        align-self: flex-start;
-        padding-top: 30px;
-        @include breakpoints-tablet{
-            position: absolute;
-        }
-    }   
+    @include breakpoints-desktop{
+        // margin-left: 35px;
+    }
+    
 }
 .card-heart{
     right: 5%;
@@ -114,15 +146,40 @@ nav{
     justify-content: flex-end;
     padding-right: 20px;
     font-size: 21px;
-    cursor: pointer;
+    // cursor: pointer;
 
 }
-.section-container{
+
+.title-secondary{
+    text-align: left;
     @include breakpoints-tablet{
-    display: flex;
-    // padding: 50px;
-    margin-left: 20%;
-    justify-content: space-between;
-    // width: 100%;
+        position: absolute;
+        width: auto;
+        top: 1px;    
+        // padding-right: 590px;
+        margin-right: 580px;
+
+    }
+    @include breakpoints-desktop{
+        margin-right: 780px;
+        font-size: 24px;
+    }
+}
+.title-restaurant{
+    @include breakpoints-tablet{
+    // position: absolute;
+    // padding-right: 610px;
+        margin-right: 610px;
+    // left: inherit;
+    // align-self: flex-start;
+    // top: 1px;
+    }
+    @include breakpoints-desktop{
+        // padding-right: 1400px;
+        // width: 100%;
+        // align-self: center;
+        // text-align: left;
+        // right: 300px;
+        margin-right: 1290px;
     }
 }
