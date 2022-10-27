@@ -11,7 +11,6 @@ footer{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        // margin-left: 50px;
     }
 }
         
@@ -47,7 +46,6 @@ footer{
     margin-bottom: 7px;
     @include breakpoints-tablet{
         margin: 10px;
-        // padding:10px;
         white-space: nowrap;
     }
     @include breakpoints-desktop{
@@ -57,9 +55,7 @@ footer{
             font-size: 13px;
             margin-right: 11px;
         }
-        &:hover{
-            color: $color-secondary;
-        }          
+
 }
 .fa-utensils{
     padding-right: 5px;
@@ -67,9 +63,6 @@ footer{
 .footer-link{
     color: $white;
         &:hover{
-            background:linear-gradient(to left, $color-primary, lighten($color-primary, 5%), $color-secondary, lighten($color-secondary, 5%));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: $color-secondary;
         }
 }

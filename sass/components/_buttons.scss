@@ -1,6 +1,6 @@
-// xxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxx
 // button main 
-// xxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxx
 .btn-main{
     @include btn-main;
         &:hover{
@@ -9,108 +9,18 @@
             transition-duration: $transition-btn;
         }        
 }
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-// buttons functioning & numbers
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-.btn-functioning{
-    @include btn-functioning;
-        margin-bottom: 25px;
-        font-weight: 500;
-        font-size: 16px;
-
-        @include breakpoints-tablet{
-            // max-width: 322px;
-            // min-width: 100%;
-            // max-width: 800px;
-            // text-align: center;
-            // width: auto;
-            white-space: nowrap;
-            padding-right: 5px; 
-            // margin-left: 5px;
-            transition-duration: 0ms;
-            position: relative;
-
-        }
-        @include breakpoints-desktop{
-            // width: 250px;
-            // margin: 0;
-            // padding: 0;
-        }
-        i{
-        }
-    &:hover{
-        background: $color-bg-functionning;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        transition-duration: $transition-btn;
-            i{
-                color: $color-primary;
-            }            
-        }
-
-}
-.logo__functioning{
-    &--phone{
-        margin-right: 25px;
-        color: #7E7E7E;         
-
-    }
-    &--list{
-        margin-right: 35px;
-        color: #7E7E7E;         
-        
-    }
-    &--shop{
-        margin-right: 30px;
-        color: #7E7E7E;         
-
-    }
-}
-.logo__functioning{
-    @include breakpoints-tablet{
-
-        &--phone{
-            padding:0 5px 0 15px;
-            margin-right: 0;
-        }
-        &--list{
-            margin-left: 15px;
-            margin-right: 5px;
-        }
-        &--shop{
-            margin-left: 15px;
-            margin-right: 5px
-        }
-    }
-    
-}
-.number{
-    @extend %flex-center-row;
-    z-index: 1;
-    // position: relative;
-    position: absolute;
-    left: 8px;
-    margin-top: 23px;
-    // text-align: left;
-    // top: 50px;
-    right: 12px;
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
-    background: $color-primary;
-    color: $white;
-    @include breakpoints-tablet{
-        left:-13px;
-    }
-
-}
-
-// xxxxxxxx
+// xxxxxxxxxxxxxxxx
 // hearts
-// xxxxxxxx
+// xxxxxxxxxxxxxxxx
 .fa-heart{
+   
+    // transition: 1200ms;
+    animation: degress-color-heart 600ms;
     cursor: pointer;
-        &:hover::before{
+        &:hover{
             @include heart-hover;
+
         }
+
 }

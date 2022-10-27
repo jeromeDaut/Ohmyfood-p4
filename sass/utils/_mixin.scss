@@ -41,12 +41,12 @@
 
 @mixin breakpoints-tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
-        @content
+        @content;
     }
 }
 
 @mixin breakpoints-desktop {
     @media screen and (min-width: map-get($breakpoints, desktop)) {
-        @content
+        @content;
     }
 }
