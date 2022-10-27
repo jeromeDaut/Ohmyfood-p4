@@ -13,7 +13,6 @@ h1, .btn-main, .article-container, .restaurants-menu a {
 
 @keyframes progress-color-heart {
   0% {
-    transform: scaleX(0);
     opacity: 0;
   }
   25% {
@@ -26,7 +25,29 @@ h1, .btn-main, .article-container, .restaurants-menu a {
     opacity: 0.75;
   }
   100% {
-    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes degress-color-heart {
+  0% {
+    font-weight: 600;
+    color: #FF79DA;
+    opacity: 1;
+  }
+  25% {
+    font-weight: 600;
+    color: #FF79DA;
+    opacity: 0.75;
+  }
+  50% {
+    font-weight: 500;
+    color: #FF79DA;
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -81,6 +102,7 @@ a {
 }
 .restaurants-menu a {
   color: #F7F7F7;
+  padding-top: 20px;
 }
 
 .nav-container {
@@ -94,6 +116,7 @@ a {
     align-items: center;
     justify-content: center;
     width: auto;
+    top: 40px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -117,90 +140,6 @@ a {
   }
 }
 
-.section-container {
-  padding: 18px 20px 40px 20px;
-  background-color: #F7F7F7;
-}
-@media screen and (min-width: 768px) {
-  .section-container {
-    display: flex;
-    position: relative;
-    padding: 50px 0 40px 0;
-    justify-content: center;
-    padding-top: 50px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section-container {
-    flex-wrap: nowrap;
-    overflow: hidden;
-    align-items: center;
-    padding-left: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .article-container {
-    width: 330px;
-    margin: 20px;
-    border: 1px solid red;
-    position: relative;
-  }
-}
-.card-heart {
-  right: 5%;
-  width: 20%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  font-size: 21px;
-}
-
-.title-secondary {
-  text-align: left;
-}
-@media screen and (min-width: 768px) {
-  .title-secondary {
-    position: absolute;
-    width: auto;
-    top: 1px;
-    margin-right: 580px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .title-secondary {
-    margin-right: 780px;
-    font-size: 24px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .title-restaurant {
-    margin-right: 610px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .title-restaurant {
-    margin-right: 1290px;
-  }
-}
-
-.btn-main {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  width: 218px;
-  height: 50px;
-  transition-duration: 600ms;
-}
-.btn-main:hover {
-  opacity: 0.9;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  transition-duration: 600ms;
-}
-
 .btn-functioning {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -211,12 +150,12 @@ a {
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 16px;
+  transition: 600ms;
 }
 @media screen and (min-width: 768px) {
   .btn-functioning {
     white-space: nowrap;
     padding-right: 5px;
-    transition-duration: 0ms;
     position: relative;
   }
 }
@@ -275,31 +214,85 @@ a {
   }
 }
 
-.fa-heart {
-  cursor: pointer;
+.section-container {
+  padding: 18px 20px 40px 20px;
+  background-color: #F7F7F7;
 }
-.fa-heart:hover::before {
-  animation: progress-color-heart 600ms;
-  display: inline-block;
-  background: linear-gradient(to top, #9356DC, #a16be0, #FF79DA, #ff93e1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  text-shadow: #9356DC 0px 0px 18px;
+@media screen and (min-width: 768px) {
+  .section-container {
+    display: flex;
+    position: relative;
+    padding: 50px 0 40px 0;
+    justify-content: center;
+    padding-top: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-container {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    align-items: center;
+    padding-left: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .article-container {
+    width: 330px;
+    margin: 20px;
+    position: relative;
+  }
+}
+.card-heart {
+  right: 5%;
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-size: 21px;
+}
+
+.title-secondary {
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .title-secondary {
+    position: absolute;
+    width: auto;
+    top: 1px;
+    margin-right: 580px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title-secondary {
+    margin-right: 780px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-restaurant {
+    margin-right: 610px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title-restaurant {
+    margin-right: 1290px;
+  }
 }
 
 .card-container {
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  transition: 600ms;
+  transition-duration: 600ms;
 }
 @media screen and (min-width: 768px) {
   .card-container {
     margin: 0;
     max-width: 340px;
-    border: 1px solid blue;
   }
 }
 @media screen and (min-width: 992px) {
@@ -314,7 +307,7 @@ a {
   width: 100%;
 }
 .card-container:hover {
-  transition: 500ms;
+  transition: 600ms;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -350,6 +343,36 @@ a {
   height: 29px;
   padding: 12px 5px 5px 5px;
 }
+
+.btn-main {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 218px;
+  height: 50px;
+  transition-duration: 600ms;
+}
+.btn-main:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition-duration: 600ms;
+}
+
+.fa-heart {
+  animation: degress-color-heart 600ms;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  animation: progress-color-heart 600ms;
+  display: inline-block;
+  background: linear-gradient(to top, #9356DC, #a16be0, #FF79DA, #ff93e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-shadow: #9356DC 0px 0px 18px;
+}
+
 h1 {
   font-family: Shrikhand, sans-serif;
   font-style: italic;
@@ -430,9 +453,6 @@ footer {
   font-size: 13px;
   margin-right: 11px;
 }
-.footer_list-items:hover {
-  color: #FF79DA;
-}
 
 .fa-utensils {
   padding-right: 5px;
@@ -442,10 +462,7 @@ footer {
   color: #fff;
 }
 .footer-link:hover {
-  background: linear-gradient(to left, #9356DC, #a16be0, #FF79DA, #ff93e1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */
