@@ -19,7 +19,6 @@
 }
 .title-restaurants{
     @include font-title-restaurants;
-    border: 1px solid red;
     white-space: nowrap;
     display: flex;
     align-items: center;
