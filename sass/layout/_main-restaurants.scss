@@ -1,0 +1,131 @@
+.main-restaurants{
+    background: $color-background;
+
+}
+.picture-restaurant{
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+}
+.menu{
+    border-radius: 40px 40px 0px 0px;
+    background: $color-background;
+    position: relative;
+    top:-50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;       
+}
+.title-restaurants{
+    @include font-title-restaurants;
+    border: 1px solid red;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+        p{
+            margin-left: 20px;
+            font-size: 21px;
+        
+        }
+}
+h4{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 3px solid $color-background-new;
+    width: 40px;
+    height: 27px;
+    align-self: flex-start;
+    margin-left: 5%;
+}
+.menu-card-container{
+    margin: 15px;
+    width: 90%;
+    display: flex;
+    @include box-shadow;
+    border-radius: map-get($radius-btn, cards-btn);
+        &:active{
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            
+        }
+}
+.menu-card{
+    position: relative;
+    @include box-shadow;
+    border-radius: map-get($radius-btn, cards-btn);
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    background: $white;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+    transition-duration: 600ms;
+    gap: 10px;
+        &:active{
+            width: 80%;
+            border-radius: 15px 0 0 15px;
+        }
+        
+}
+.title-menu{
+    margin: 0;
+    width: 75%;
+    text-align: start;
+    font-weight: 500;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.garnish{
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 17.58px;
+    align-self: flex-start;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+     
+} 
+.price{
+    display: inline-block;
+    position: absolute;
+    top: 24px;
+    right: 8%;
+}  
+.check{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0;
+    background: $color-background-new;
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+    height: 70px;
+    width: 17%;
+    right: 5%;
+}
+.btn-main{
+    margin-top: 35px;
+    @include btn-main;
+    color: $white;
+        &:hover{
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            transition-duration: $transition-btn;
+        }
+}
