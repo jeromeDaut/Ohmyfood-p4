@@ -1,4 +1,4 @@
-h1, .btn-main, .article-container, .restaurants-menu a {
+.article-container, .restaurants-menu a, h1, .btn-main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +83,62 @@ section {
 a {
   text-decoration: none;
   color: black;
+}
+
+.btn-main {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  width: 218px;
+  height: 50px;
+  transition-duration: 600ms;
+}
+.btn-main:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition-duration: 600ms;
+}
+
+.fa-heart {
+  animation: degress-color-heart 600ms;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  animation: progress-color-heart 600ms;
+  display: inline-block;
+  background: linear-gradient(to top, #9356DC, #a16be0, #FF79DA, #ff93e1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-shadow: #9356DC 0px 0px 18px;
+}
+
+h1 {
+  font-family: Shrikhand, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 30px;
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 37px;
+  }
+}
+
+.restaurants-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.restaurants-header .arrow {
+  position: absolute;
+  align-self: center;
+  top: 30px;
+  left: 40px;
+  font-size: 1.3rem;
+  width: 17.2px;
+  height: 16px;
 }
 
 .localisation {
@@ -352,62 +408,6 @@ a {
   padding: 12px 5px 5px 5px;
 }
 
-.btn-main {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  width: 218px;
-  height: 50px;
-  transition-duration: 600ms;
-}
-.btn-main:hover {
-  opacity: 0.9;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  transition-duration: 600ms;
-}
-
-.fa-heart {
-  animation: degress-color-heart 600ms;
-  cursor: pointer;
-}
-.fa-heart:hover {
-  animation: progress-color-heart 600ms;
-  display: inline-block;
-  background: linear-gradient(to top, #9356DC, #a16be0, #FF79DA, #ff93e1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  text-shadow: #9356DC 0px 0px 18px;
-}
-
-h1 {
-  font-family: Shrikhand, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 30px;
-}
-@media screen and (min-width: 992px) {
-  h1 {
-    font-size: 37px;
-  }
-}
-
-.restaurants-header {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.restaurants-header .arrow {
-  position: absolute;
-  align-self: center;
-  top: 30px;
-  left: 40px;
-  font-size: 1.3rem;
-  width: 17.2px;
-  height: 16px;
-}
-
 .main-restaurants {
   background: #F7F7F7;
 }
@@ -435,7 +435,6 @@ h1 {
   font-weight: 400;
   font-style: italic;
   line-height: 41px;
-  border: 1px solid red;
   white-space: nowrap;
   display: flex;
   align-items: center;
