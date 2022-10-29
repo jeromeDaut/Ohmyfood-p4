@@ -8,3 +8,22 @@ h1{
         }
 }
 
+// // xxxxxxxxxxxxxxxxxxx
+// // header restaurants
+// // xxxxxxxxxxxxxxxxxxx
+.restaurants-header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+        .arrow{
+            position: absolute;
+            align-self: center;
+            top: 30px;
+            left: 40px;
+            font-size: 1.3rem;
+            width: 17.2px;
+            height: 16px;
+        }
+
+}
+

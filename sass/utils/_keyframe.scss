@@ -45,3 +45,12 @@
     }
     
   }
+  @keyframes menu-animation{
+    0%{
+        // transition-duration: 500ms;
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+  }
