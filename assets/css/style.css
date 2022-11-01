@@ -51,12 +51,28 @@
     opacity: 1;
   }
 }
-@keyframes menu-animation {
+@keyframes animation-opening {
   0% {
-    transform: scaleX(1);
+    transform: scale(0);
   }
   100% {
-    transform: scaleX(0);
+    transform: scale(1);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-back {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 body {
@@ -64,6 +80,7 @@ body {
   font-size: 17px;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   body {
@@ -136,9 +153,15 @@ h1 {
   align-self: center;
   top: 30px;
   left: 40px;
-  font-size: 1.3rem;
+  font-size: 20px;
   width: 17.2px;
   height: 16px;
+}
+@media screen and (min-width: 992px) {
+  .restaurants-header .arrow {
+    font-size: 30px;
+    top: 35px;
+  }
 }
 
 .localisation {
@@ -408,6 +431,36 @@ h1 {
   padding: 12px 5px 5px 5px;
 }
 
+.loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-top: 5px dashed #9356DC;
+  border-right: 5px dashed #FF79DA;
+  animation: rotation 3000ms linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-style: solid solid dashed;
+  color: #9356DC;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: rotation-back 2000ms linear infinite;
+  transform-origin: center center;
+}
+
 .main-restaurants {
   background: #F7F7F7;
 }
@@ -416,6 +469,11 @@ h1 {
   width: 100%;
   height: 275px;
   object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .picture-restaurant {
+    height: 350px;
+  }
 }
 
 .menu {
@@ -427,6 +485,12 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding-bottom: 0px;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 .title-restaurants {
@@ -456,13 +520,24 @@ h4 {
   align-self: flex-start;
   margin-left: 5%;
 }
+@media screen and (min-width: 768px) {
+  h4 {
+    margin-left: 18%;
+  }
+}
 
 .menu-card-container {
   margin: 15px;
   width: 90%;
   display: flex;
+  cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+}
+@media screen and (min-width: 768px) {
+  .menu-card-container {
+    width: 65%;
+  }
 }
 .menu-card-container:active {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -483,7 +558,7 @@ h4 {
   transition-duration: 600ms;
   gap: 10px;
 }
-.menu-card:active {
+.menu-card:hover {
   width: 80%;
   border-radius: 15px 0 0 15px;
 }
@@ -521,7 +596,6 @@ h4 {
 }
 
 .check {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: absolute;
   display: flex;
   align-items: center;
@@ -532,8 +606,8 @@ h4 {
   font-weight: bold;
   font-size: 20px;
   height: 70px;
-  width: 17%;
-  right: 5%;
+  width: 20%;
+  right: 0;
 }
 
 .btn-main {
@@ -550,6 +624,57 @@ h4 {
   opacity: 0.9;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   transition-duration: 600ms;
+}
+
+.anim__delay--1 {
+  animation: animation-opening 600ms 200ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--2 {
+  animation: animation-opening 600ms 400ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--3 {
+  animation: animation-opening 600ms 600ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--4 {
+  animation: animation-opening 600ms 800ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--5 {
+  animation: animation-opening 600ms 1000ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--6 {
+  animation: animation-opening 600ms 1200ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--7 {
+  animation: animation-opening 600ms 1400ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--8 {
+  animation: animation-opening 600ms 1600ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--9 {
+  animation: animation-opening 600ms 1800ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+.anim__delay--10 {
+  animation: animation-opening 600ms 2000ms;
+  transform: scale(0);
+  animation-fill-mode: forwards;
 }
 
 footer {
