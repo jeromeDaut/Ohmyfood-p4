@@ -7,11 +7,7 @@ footer{
     color: $white;
     font-size: 16px;
     font-weight: 500;
-    @include breakpoints-tablet{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    }
+
 }
         
 .footer-title{
@@ -20,37 +16,18 @@ footer{
     margin-top: 0;
     margin-left: 40px;
     padding-top: 22px;
-        @include breakpoints-tablet{
-            margin: 0 15px;
-            padding: 0 10px;
-        }
-        @include breakpoints-desktop{
-            margin: 0 25px;
-        }
-        
+                
 }
 .footer-list-container{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-        @include breakpoints-tablet{
-            display: flex;
-            flex-direction: row;
-            padding-left: 0;
-        }
        
 }
        
 
 .footer_list-items{
-    margin-bottom: 7px;
-    @include breakpoints-tablet{
-        margin: 10px;
-        white-space: nowrap;
-    }
-    @include breakpoints-desktop{
-        margin-left: 35px;
-    }
+    margin-bottom: 7px;    
         i{
             font-size: 13px;
             margin-right: 11px;

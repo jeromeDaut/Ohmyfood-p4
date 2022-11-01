@@ -1,9 +1,8 @@
-@import "./utils/variable";
-@import "./utils/placeholder";
-@import "./utils/maps";
+@import "./utils/utils";
 @import "./utils/keyframe";
 @import "./utils/mixin";
 @import "./base/base";
+@import "./base/breakpoints";
 @import "./components/buttons";
 @import "./components/cards";
 @import "./layout/header";

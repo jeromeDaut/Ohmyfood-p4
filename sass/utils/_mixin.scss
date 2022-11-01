@@ -44,21 +44,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    text-shadow: $color-primary 0px 0px 18px;
+    // text-shadow: $color-primary 0px 0px 18px;
 }
 @mixin menu-opening{
     transform: scale(0);
     animation-fill-mode: forwards;
 
-}
-@mixin breakpoints-tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
-}
-
-@mixin breakpoints-desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        @content;
-    }
 }

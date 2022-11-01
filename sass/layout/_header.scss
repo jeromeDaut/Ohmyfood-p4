@@ -3,9 +3,6 @@ h1{
     @include font-logo-ohmyfood;
     font-size: map-get($font-size, main-titles);
     @extend %flex-center-column;
-        @include breakpoints-desktop{
-            font-size: 37px;
-        }
 }
 
 // // xxxxxxxxxxxxxxxxxxx
@@ -23,10 +20,6 @@ h1{
             font-size: 20px;
             width: 17.2px;
             height: 16px;
-            @include breakpoints-desktop{
-                font-size: 30px;
-                top: 35px;
-            }
         }
 
 }

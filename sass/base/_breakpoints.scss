@@ -1,0 +1,163 @@
+// tablet breakpoints 768px
+@media screen and (min-width: map-get($breakpoints, tablet)) {
+    body{
+        min-width: auto;
+    }
+    // xxxxxxxxxxx
+    // homepage
+    // xxxxxxxxxxx
+
+    // functioning
+    .nav-container{
+        position: relative;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        top: 40px;
+    }
+    .fuctioning-container{
+        margin: 0 15px;
+        position: relative;
+    }
+    .btn-functioning{
+        white-space: nowrap;
+        padding-right: 5px; 
+        position: relative;
+    }
+    .logo__functionning{
+        &--phone{
+            padding:0 5px 0 15px;
+            margin-right: 0;
+        }
+        &--list{
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+        &--shop{
+            margin-left: 15px;
+            margin-right: 5px
+        }
+    }
+    .number{
+        left:-13px;
+    }
+    // footer
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .footer-title{
+        margin: 0 15px;
+        padding: 0 10px;
+    }
+    .footer-list-container{
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+    }
+    .footer_list-items{
+        margin: 10px;
+        white-space: nowrap;
+    }
+    //container restaurants
+    .section-container{
+        display: flex;
+        position: relative;
+        padding: 50px 0 40px 0;
+        justify-content: center;
+        padding-top: 50px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .article-container{
+        width: 330px;
+        margin: 20px;
+        position: relative
+    }
+    .title-secondery{
+        position: absolute;
+        width: auto;
+        top: 1px;    
+        margin-right: 580px;
+    }
+    .title-restaurant{
+        margin-right: 610px;
+    }
+    .card-container{
+        margin: 0;
+        max-width: 340px;
+    }
+    // xxxxxxxxxxxxx
+    // restaurants
+    // xxxxxxxxxxxxx
+    .picture-restaurant{
+        height: 350px;
+    }
+    .menu{
+        width: 70%;
+        margin: 0 auto; 
+    }
+    h4{
+        margin-left: 18%;
+    }
+    .menu-card-container{
+        width: 65%;
+    }
+}
+// desktop breakpoints 992px
+@media screen and (min-width: map-get($breakpoints, desktop)) {
+    // homepage
+    h1{
+        font-size: 37px;
+    }
+    .restaurants-menu{
+        h2{
+            font-size: 35px;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .nav-container{
+        padding:50px  0;
+        align-items: center;
+        align-content: center;
+    }
+    .functionning-container{
+        margin: 10px 13px;
+        width: 300px;
+    }
+    .section-container{
+        flex-wrap: nowrap;
+        overflow: hidden;
+        align-items: center;
+        padding-left: 480px;
+    }
+    .title-secondery{
+        margin-right: 780px;
+        font-size: 24px;
+    }
+    .title-restaurant{
+        margin-right: 1290px;
+
+    }
+    .card-container{
+        width: 320px;
+    }
+    .footer-title{
+        margin: 0 25px;
+
+    }
+    .footer_list-items{
+        margin-left: 35px;
+
+    }
+    // restaurants
+    .arrow{
+        font-size: 30px;
+        top: 35px;
+    }
+}

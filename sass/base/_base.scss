@@ -8,10 +8,6 @@ body{
     padding: 0;
     position: relative; 
 
-    @include breakpoints-tablet{
-        min-width: auto;
-    }
-
 }
 
 
