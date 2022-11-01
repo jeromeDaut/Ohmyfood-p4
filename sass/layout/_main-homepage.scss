@@ -279,3 +279,38 @@
     
 
 }
+
+.loader {
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-top: 5px  dashed $color-primary;
+    border-right: 5px   dashed $color-secondary;
+    animation: rotation 3000ms linear infinite;
+    &::after{
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-style: solid solid dashed ;
+        color: $color-primary;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  animation: rotation-back 2000ms  linear infinite;
+  transform-origin: center center;
+//   animation: rotation-back linear infinite;
+
+    }
+  }
+  
+  
