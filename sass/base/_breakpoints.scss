@@ -43,24 +43,7 @@
     .number{
         left:-13px;
     }
-    // footer
-    footer{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
- }
-    .footer-title{
-        margin: 0 15px;
-        padding: 0 10px;
-    }
-    .footer-list-container{
-        flex-direction: row;
-        padding-left: 0;
-    }
-    .footer_list-items{
-        margin: 10px;
-        white-space: nowrap;
-    }
+    
     //container restaurants
     .section__restaurants{
         display: flex;
@@ -86,6 +69,25 @@
         width: 330px;
         margin: 20px;
     }
+    // footer
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+     align-items: center;
+    }
+    .footer-title{
+        margin: 0 15px;
+        padding: 0 10px;
+    }
+    .footer-list-container{
+        flex-direction: row;
+        padding-left: 0;
+    }
+    .footer_list-items{
+        margin: 10px;
+        white-space: nowrap;
+    }
+
     // xxxxxxxxxxxxx
     // restaurants
     // xxxxxxxxxxxxx
@@ -102,7 +104,10 @@
     .menu-card-container{
         width: 65%;
     }
+    
 }
+
+
 // desktop breakpoints 992px xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 @media screen and (min-width: map-get($breakpoints, desktop)) {
     body{
@@ -123,6 +128,7 @@
             }
         }
     }
+    // functioning
     .section__functioning{
         justify-content: center;
         flex-wrap: nowrap;
@@ -139,6 +145,7 @@
         max-width: 300px;
         
     }
+    // restaurants section
     .section__restaurants{
         flex-wrap: nowrap;
         justify-content: center;
@@ -162,7 +169,7 @@
         margin-left: 35px;
 
     }
-    // restaurants
+    // restaurants pages
     .arrow{
         font-size: 30px;
         top: 35px;
