@@ -39,12 +39,20 @@
 @mixin heart-hover {
     animation: progress-color-heart $transition-btn;
     display: inline-block;
-    background: linear-gradient(to top, $color-primary, lighten($color-primary, 5%), $color-secondary, lighten($color-secondary, 5%));
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    // text-shadow: $color-primary 0px 0px 18px;
+}
+@mixin heart-degress {
+    animation: progress-color-heart $transition-btn;
+    display: inline-block;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
 @mixin menu-opening{
     transform: scale(0);

@@ -21,19 +21,18 @@
 @keyframes degress-color-heart {
     0% {
         font-weight: 600;
-        color: $color-secondary;
+        color: $color-primary;
 
         opacity: 1;
     }
     25%{
         font-weight: 600;
-        color: $color-secondary;
+        color: $color-primary;
         opacity: .75;
     }
     50%{
         font-weight: 500;
         color: $color-secondary;
-        
         opacity: .5;
     }
     75%{
@@ -73,5 +72,15 @@
     }
     100%{
         transform: rotate(-360deg);
+    }
+  }
+  @keyframes loading-body {
+    0%{ 
+      animation-fill-mode: backwards;
+      transition-delay: 500ms;
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
     }
   }

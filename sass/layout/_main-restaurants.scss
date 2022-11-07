@@ -1,13 +1,13 @@
-.main-restaurants{
+.main__restaurants{
     background: $color-background;
 
 }
-.picture-restaurant{
+.picture__restaurant{
         width: 100%;
         height: 275px;
         object-fit: cover;
 }
-.menu{
+.section__menu{
     border-radius: 40px 40px 0px 0px;
     background: $color-background;
     position: relative;
@@ -17,13 +17,13 @@
     align-items: center;
     padding-bottom: 0px;  
 }
-.title-restaurants{
+.title__restaurants{
     @include font-title-restaurants;
     white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: space-between;    
-        p{
+        &--hearts{
             margin-left: 20px;
             font-size: 21px;
         
@@ -40,7 +40,7 @@ h4{
     align-self: flex-start;
     margin-left: 5%;
 }
-.menu-card-container{
+.card__container{
     margin: 15px;
     width: 90%;
     display: flex;
@@ -52,7 +52,7 @@ h4{
          
         }
 }
-.menu-card{
+.card__menu{
     position: relative;
     @include box-shadow;
     border-radius: map-get($radius-btn, cards-btn);
@@ -65,14 +65,13 @@ h4{
     width: 100%;
     z-index: 1;
     transition-duration: 600ms;
-    gap: 10px;
-        &:hover{
+        &:active{
             width: 80%;
             border-radius: 15px 0 0 15px;
         }
         
 }
-.title-menu{
+.card__title{
     margin: 0;
     width: 75%;
     text-align: start;
@@ -83,7 +82,7 @@ h4{
     text-overflow: ellipsis;
 
 }
-.garnish{
+.card__garnish{
     display: inline-block;
     text-align: left;
     margin: 0;
@@ -98,13 +97,13 @@ h4{
 
      
 } 
-.price{
+.card__price{
     display: inline-block;
     position: absolute;
     top: 24px;
     right: 8%;
 }  
-.check{
+.card__checked{
     position: absolute;
     display: flex;
     align-items: center;
@@ -116,7 +115,9 @@ h4{
     font-size: 20px;
     height: 70px;
     width: 20%;
+    // width: 0;
     right: 0;
+    
 }
 .btn-main{
     margin-top: 35px;

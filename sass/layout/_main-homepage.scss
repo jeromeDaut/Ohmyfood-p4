@@ -1,12 +1,32 @@
 // xxxxxxxxxxxxxxxx
-// localisation
+// form localisation
 // xxxxxxxxxxxxxxxx
 
-.localisation{
+.hero__localisation{
     @extend %flex-center-row;
     background-color: #EAEAEA;
-        i{
-            margin-right: 20px;
+    height: 50px;
+    text-align: center;
+    box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.1);
+        &--fa{
+            align-items: center;
+        }
+        &--input{
+        background-color: #EAEAEA;
+        border: unset;
+        margin-left: 15px;
+
+            &::placeholder{
+                font-family: 'Roboto', sans-serif;
+                line-height: 18.75;
+                color: black;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &:focus{
+                outline: #943737;
+            }
         }
 
 }
@@ -14,14 +34,19 @@
 // xxxxxxxxxxxxx
 // menu
 // xxxxxxxxxxxxx
-.restaurants-menu {
+.hero__restaurants {
     background: $color-background;
     padding-bottom: 39px;
-        h2{
+        &--title{
+            font-family: Roboto, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            font-style:normal ;
             margin-top: 0;
             padding-top: 39px;
+
         }
-        a{
+        &--btn{
             @extend %flex-center-column;
             color: $color-background;
             padding-top: 20px;
@@ -32,14 +57,18 @@
 // container functioning
 // xxxxxxxxxxxxxxxxxxxxxx
 
-.nav-container{
+.section__functioning{
     padding: 50px 20px 50px;
+
+    &--title{
+        text-align: left;
+    }
 }
 
 
 //xxxxxxx buttons & numbers functioning xxxxxxxxx 
 
-.btn-functioning{
+.functioning__container{
     @include btn-functioning;
         margin-bottom: 25px;
         font-weight: 500;
@@ -56,7 +85,7 @@
         }
 
 }
-.logo__functioning{
+.functioning__logo{
     &--phone{
         margin-right: 25px;
         color: #7E7E7E;         
@@ -91,38 +120,43 @@
 // container restaurant
 // xxxxxxxxxxxxxxxxxxxx
 
-.section-container{
+.section__restaurants{
     padding: 18px 20px 40px 20px;
     background-color: $color-background;
+        &--title{
+        text-align: left;
+
+        }
 }
-.article-container{
-    @extend %flex-center-column;    
-}
-.card-heart{
+
+.container__heart{
     right: 5%;
     width: 20%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding-right: 20px;
     font-size: 21px;
 }
 
-.title-secondary{
-    text-align: left;
-}
 
 // xxxx cards restaurants xxxxxxxx
 
-.card-container{
+.figure__container{
+    align-self: flex-start; 
+    margin: 15px 0 ;
     border-radius: map-get($radius-btn, index-btn);
     @include box-shadow; 
     width: 100%;
     transition-duration: $transition-btn;
-        img {
+        &--img {
             border-radius: 15px 15px 0 0;
             object-fit: cover;
             height: 174px;
             width: 100%;
+        }
+        &--link{
+            position: relative;
         }
         &:hover{
             transition: $transition-btn;
@@ -130,22 +164,22 @@
         }
 }
 
-.card-bottom-container{
+.figcaption__container{
     display: flex;
     white-space: nowrap;
 }
 
-.card-texts{
+.container__texts{
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-        h2 {
+        &--title {
             margin: 5px;
             font-size: 18px;
         }
-        p{
+        &--localisation{
             margin: 5px;
         }
 }
@@ -172,12 +206,13 @@
     height: 150px;
     border-radius: 50%;
     display: inline-block;
-    position: absolute;
+    position: sticky;
     top: 0;
     bottom: 0;
     border-top: 5px  dashed $color-primary;
     border-right: 5px   dashed $color-secondary;
     animation: rotation 3000ms linear infinite;
+    // z-index: -9999;
     &::after{
         content: '';
         box-sizing: border-box;
@@ -189,11 +224,11 @@
         margin: auto;
         border-style: solid solid dashed ;
         color: $color-primary;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  animation: rotation-back 2000ms  linear infinite;
-  transform-origin: center center;
+        width: 70px;
+         height: 70px;
+        border-radius: 50%;
+        animation: rotation-back 2000ms  linear infinite;
+        transform-origin: center center;
 //   animation: rotation-back linear infinite;
 
     }

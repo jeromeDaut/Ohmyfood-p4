@@ -1,5 +1,5 @@
 // tablet breakpoints 768px
-@media screen and (min-width: map-get($breakpoints, tablet)) {
+@media screen and (min-width: 768px) {
     body{
         min-width: auto;
     }
@@ -8,25 +8,25 @@
     // xxxxxxxxxxx
 
     // functioning
-    .nav-container{
+    .section__functioning{
         position: relative;
         display: flex;
-        margin: 0;
-        align-items: center;
         justify-content: center;
-        width: auto;
-        top: 40px;
+            &--title{
+                position: absolute;
+                top: 0px;
+                margin-right: 530px;
+            }
     }
-    .fuctioning-container{
-        margin: 0 15px;
+    .functioning__card{
+        margin: 25px 15px 0 ;
         position: relative;
     }
-    .btn-functioning{
+    .functioning__container{
         white-space: nowrap;
         padding-right: 5px; 
-        position: relative;
     }
-    .logo__functionning{
+    .functioning__logo{
         &--phone{
             padding:0 5px 0 15px;
             margin-right: 0;
@@ -48,13 +48,12 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-    }
+ }
     .footer-title{
         margin: 0 15px;
         padding: 0 10px;
     }
     .footer-list-container{
-        display: flex;
         flex-direction: row;
         padding-left: 0;
     }
@@ -63,40 +62,37 @@
         white-space: nowrap;
     }
     //container restaurants
-    .section-container{
+    .section__restaurants{
         display: flex;
         position: relative;
         padding: 50px 0 40px 0;
         justify-content: center;
         padding-top: 50px;
-        margin-top: 50px;
         flex-wrap: wrap;
+
+            &--title{
+                position: absolute;
+                margin-right: 570px;
+                width: auto;
+                top: 1px;    
+            }
     }
-    .article-container{
-        width: 330px;
-        margin: 20px;
-        position: relative
-    }
-    .title-secondery{
-        position: absolute;
-        width: auto;
-        top: 1px;    
-        margin-right: 580px;
-    }
+    
     .title-restaurant{
         margin-right: 610px;
     }
-    .card-container{
-        margin: 0;
-        max-width: 340px;
+    .figure__container{
+        margin: 20px;
+        width: 330px;
+        margin: 20px;
     }
     // xxxxxxxxxxxxx
     // restaurants
     // xxxxxxxxxxxxx
-    .picture-restaurant{
+    .picture__restaurant{
         height: 350px;
     }
-    .menu{
+    .section__menu{
         width: 70%;
         margin: 0 auto; 
     }
@@ -107,45 +103,56 @@
         width: 65%;
     }
 }
-// desktop breakpoints 992px
+// desktop breakpoints 992px xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 @media screen and (min-width: map-get($breakpoints, desktop)) {
+    body{
+        width: 100%;
+    }
     // homepage
     h1{
         font-size: 37px;
     }
-    .restaurants-menu{
-        h2{
+    .section__hero{
+        padding-bottom: 0;
+    }
+    .hero__restaurants{
+        &--title{
             font-size: 35px;
             p{
                 font-size: 18px;
             }
         }
     }
-    .nav-container{
-        padding:50px  0;
-        align-items: center;
-        align-content: center;
-    }
-    .functionning-container{
-        margin: 10px 13px;
-        width: 300px;
-    }
-    .section-container{
+    .section__functioning{
+        justify-content: center;
         flex-wrap: nowrap;
-        overflow: hidden;
-        align-items: center;
-        padding-left: 480px;
+            &--title{
+                margin-right: 780px;
+                font-size: 24px;
+            }
     }
-    .title-secondery{
-        margin-right: 780px;
-        font-size: 24px;
+    .functionning__card{
+        margin: 10px 13px;
     }
-    .title-restaurant{
-        margin-right: 1290px;
-
+    .functioning__container{
+        min-width: 250px;
+        max-width: 300px;
+        
     }
-    .card-container{
-        width: 320px;
+    .section__restaurants{
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 120%;
+        border: 1px solid blue;
+        margin-top: 0;
+         &--title{
+            margin-right: 780px;
+            font-size: 24px;
+         }
+    }
+    .figure__container{
+        margin: 20px;
+        position: relative;
     }
     .footer-title{
         margin: 0 25px;

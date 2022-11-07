@@ -10,7 +10,7 @@ footer{
 
 }
         
-.footer-title{
+.footer__title{
     @include font-logo-ohmyfood;
     font-size: map-get($font-size, tertiary-titles);
     margin-top: 0;
@@ -18,28 +18,26 @@ footer{
     padding-top: 22px;
                 
 }
-.footer-list-container{
+.footer__list{
     list-style-type: none;
     display: flex;
     flex-direction: column;
-       
-}
-       
-
-.footer_list-items{
-    margin-bottom: 7px;    
+    &--items{
+        margin-bottom: 7px;    
         i{
             font-size: 13px;
             margin-right: 11px;
         }
 
-}
-.fa-utensils{
-    padding-right: 5px;
-}
-.footer-link{
-    color: $white;
+    }
+    &--link{
+        color: $white;
         &:hover{
             color: $color-secondary;
         }
+    }
+       
+}
+.fa-utensils{
+    padding-right: 5px;
 }

@@ -2,10 +2,11 @@
 @import "./utils/keyframe";
 @import "./utils/mixin";
 @import "./base/base";
-@import "./base/breakpoints";
 @import "./components/buttons";
-@import "./components/cards";
+// @import "./components/cards";
 @import "./layout/header";
 @import "./layout/main-homepage";
 @import "./layout/main-restaurants";
 @import "./layout/footer";
+@import "./base/breakpoints";
+
