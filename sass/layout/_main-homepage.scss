@@ -25,7 +25,7 @@
                 line-height: 19px;
             }
             &:focus{
-                outline: #943737;
+                outline: #7E7E7E;
             }
         }
 
@@ -57,7 +57,7 @@
 // container functioning
 // xxxxxxxxxxxxxxxxxxxxxx
 
-.section__functioning{
+.functioning{
     padding: 50px 20px 50px;
 
     &--title{
@@ -68,7 +68,7 @@
 
 //xxxxxxx buttons & numbers functioning xxxxxxxxx 
 
-.functioning__container{
+.functioning__content{
     @include btn-functioning;
         margin-bottom: 25px;
         font-weight: 500;
@@ -120,7 +120,7 @@
 // container restaurant
 // xxxxxxxxxxxxxxxxxxxx
 
-.section__restaurants{
+.restaurants{
     padding: 18px 20px 40px 20px;
     background-color: $color-background;
         &--title{
@@ -200,38 +200,5 @@
     padding: 12px 5px 5px 5px;  
 }
 
-.loader {
-    
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    display: inline-block;
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    border-top: 5px  dashed $color-primary;
-    border-right: 5px   dashed $color-secondary;
-    animation: rotation 3000ms linear infinite;
-    // z-index: -9999;
-    &::after{
-        content: '';
-        box-sizing: border-box;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        border-style: solid solid dashed ;
-        color: $color-primary;
-        width: 70px;
-         height: 70px;
-        border-radius: 50%;
-        animation: rotation-back 2000ms  linear infinite;
-        transform-origin: center center;
-//   animation: rotation-back linear infinite;
-
-    }
-  }
   
   

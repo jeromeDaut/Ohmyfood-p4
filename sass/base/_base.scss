@@ -6,12 +6,8 @@ body{
     font-size: map-get($font-size, texts);
     margin: 0;
     padding: 0;
-    position: relative; 
-    // &::before{
-    //     z-index: 1;
-    // animation-delay: 3000ms;
-    // animation: loading-body 500ms;
-    // }
+    position: relative;
+
 }
 
 

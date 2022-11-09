@@ -55,6 +55,8 @@
 
     }
   }
+  
+
   // rotation loader
   @keyframes rotation {
     0% {
@@ -74,13 +76,12 @@
         transform: rotate(-360deg);
     }
   }
-  @keyframes loading-body {
-    0%{ 
-      animation-fill-mode: backwards;
-      transition-delay: 500ms;
-      opacity: 0;
+  @keyframes loading-page {
+    0%{
+      opacity: 1;
     }
     100%{
+      visibility: hidden;
       opacity: 0;
     }
   }
