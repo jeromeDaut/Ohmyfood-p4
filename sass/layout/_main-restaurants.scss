@@ -1,13 +1,10 @@
-.main__restaurants{
-    background: $color-background;
 
-}
 .picture__restaurant{
         width: 100%;
         height: 275px;
         object-fit: cover;
 }
-.section__menu{
+.menus{
     border-radius: 40px 40px 0px 0px;
     background: $color-background;
     position: relative;
@@ -15,7 +12,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0px;  
+    padding-bottom: 0px; 
+    margin-bottom: -49px; 
 }
 .title__restaurants{
     @include font-title-restaurants;
@@ -25,11 +23,11 @@
     justify-content: space-between;    
         &--hearts{
             margin-left: 20px;
-            font-size: 21px;
+            font-size: 25px;
         
         }
 }
-h4{
+.subtitleMenu{
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -47,7 +45,7 @@ h4{
     cursor: pointer;
     @include box-shadow;
     border-radius: map-get($radius-btn, cards-btn);
-        &:active{
+        &:hover{
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
          
         }
@@ -59,13 +57,13 @@ h4{
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: space-evenly;    
     background: $white;
     height: 70px;
     width: 100%;
     z-index: 1;
     transition-duration: 600ms;
-        &:active{
+        &:hover{
             width: 80%;
             border-radius: 15px 0 0 15px;
         }
@@ -73,7 +71,7 @@ h4{
 }
 .card__title{
     margin: 0;
-    width: 75%;
+    width: 80%;
     text-align: start;
     font-weight: 500;
     font-size: 18px;
@@ -90,7 +88,7 @@ h4{
     font-size: 15px;
     line-height: 17.58px;
     align-self: flex-start;
-    width: 80%;
+    width: 77%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -117,7 +115,6 @@ h4{
     width: 20%;
     // width: 0;
     right: 0;
-    
 }
 .btn-main{
     margin-top: 35px;

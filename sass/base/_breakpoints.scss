@@ -9,13 +9,8 @@
 
     // functioning
     .functioning{
-        
-        // position: relative;
-        // display: flex;
-        // justify-content: center;
             &__title{
-                // position: absolute;
-                // top: 0px;
+                text-align: center;
                 margin-right: 530px;
             }
     }
@@ -52,18 +47,10 @@
     
     //container restaurants
     .restaurants{
-        // display: flex;
-        // position: relative;
         padding: 50px 0 40px 0;
-        // justify-content: center;
-        // padding-top: 50px;
-        // flex-wrap: wrap;
-
             &__title{
-                // position: absolute;
+                text-align: center;
                 margin-right: 570px;
-                // width: auto;
-                // top: 1px;    
             }
     }
     .restaurants__container{
@@ -106,21 +93,23 @@
     .picture__restaurant{
         height: 350px;
     }
-    .section__menu{
+    .menus{
         width: 70%;
-        margin: 0 auto; 
+        margin: 0 auto -48px; 
     }
-    h4{
-        margin-left: 18%;
-    }
+    // h2{
+    //     margin-left: 18%;
+    // }
     .menu-card-container{
         width: 65%;
     }
     
 }
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// desktop breakpoints 992px 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-// desktop breakpoints 992px xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 @media screen and (min-width: map-get($breakpoints, desktop)) {
     body{
         width: 100%;
@@ -129,10 +118,11 @@
     h1{
         font-size: 37px;
     }
-    .section__hero{
+    .hero{
         padding-bottom: 0;
     }
     .hero__restaurants{
+        padding-bottom: 20px;
         &--title{
             font-size: 35px;
             p{
@@ -143,7 +133,6 @@
     // functioning
     .functioning{
         justify-content: center;
-        border: 1px solid red;
             &__title{
                 margin-right: 780px;
                 font-size: 24px;
@@ -157,7 +146,6 @@
     }
     .functioning__content{
        width: 290px;
-        
     }
     // restaurants section
     
@@ -165,10 +153,14 @@
         min-width: none;
         flex-wrap: nowrap;
         flex-direction: row;
-        border: 1px solid blue;
         margin-top: 0;
          &__title{
             font-size: 24px;
+            text-align: center;
+            margin-right: 835px;
+            //  &--hearts{
+            //     width: 100px;
+            //  }
          }
     }
     .restaurants__container{
@@ -186,15 +178,17 @@
     }
     .footer-title{
         margin: 0 25px;
-
     }
     .footer_list-items{
         margin-left: 35px;
 
     }
     // restaurants pages
+    .restaurant-name{
+        font-size: 37px;
+    }
     .arrow{
         font-size: 30px;
-        top: 35px;
+        // top: 35px;
     }
 }

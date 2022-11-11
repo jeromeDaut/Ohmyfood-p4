@@ -1,7 +1,9 @@
 // xxxxxxxxxxxxxxxx
 // form localisation
 // xxxxxxxxxxxxxxxx
-
+.hero{
+    padding-bottom: 20px;
+}
 .hero__localisation{
     @extend %flex-center-row;
     background-color: #EAEAEA;
@@ -36,7 +38,7 @@
 // xxxxxxxxxxxxx
 .hero__restaurants {
     background: $color-background;
-    padding-bottom: 39px;
+    padding-bottom: 0px;
         &--title{
             font-family: Roboto, sans-serif;
             font-size: 24px;
@@ -59,8 +61,8 @@
 
 .functioning{
     padding: 50px 20px 50px;
-
-    &--title{
+    background-color: $white;
+    &__title{
         text-align: left;
     }
 }
@@ -123,7 +125,7 @@
 .restaurants{
     padding: 18px 20px 40px 20px;
     background-color: $color-background;
-        &--title{
+        &__title{
         text-align: left;
 
         }

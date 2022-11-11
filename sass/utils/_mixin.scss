@@ -10,7 +10,7 @@
 @mixin font-title-restaurants {
     font-family: Shrikhand, sans-serif;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: normal;
     font-style: italic;
     line-height: 41px;
 
@@ -21,6 +21,7 @@
     border-radius: map-get($radius-btn, main-btn);
     background: linear-gradient($color-secondary, $color-primary);
     // width: 50%;
+    margin: 40px auto;
     width: 218px;
     height: 50px;
     transition-duration: $transition-btn;

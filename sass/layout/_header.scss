@@ -1,5 +1,5 @@
 // header index
-h1{
+.restaurant-name{
     @include font-logo-ohmyfood;
     font-size: map-get($font-size, main-titles);
     @extend %flex-center-column;
@@ -11,12 +11,21 @@ h1{
 .header__restaurants{
     display: flex;
     justify-content: center;
-    position: relative;
+    // position: relative;
+    align-items: center;
+        .restaurant-name{
+            text-align: center;
+            margin: 25px auto;
+            // position: absolute;
+        }
         .arrow{
-            position: absolute;
+            position: relative;
+            // flex-direction: row;
+            // margin-left: 25px;
             align-self: center;
-            top: 30px;
-            left: 40px;
+            bottom: 4px;
+            // right: 20%;
+            left: 25px;
             font-size: 20px;
             width: 17.2px;
             height: 16px;
