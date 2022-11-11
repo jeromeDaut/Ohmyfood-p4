@@ -11,20 +11,15 @@
 .header__restaurants{
     display: flex;
     justify-content: center;
-    // position: relative;
     align-items: center;
         .restaurant-name{
             text-align: center;
             margin: 25px auto;
-            // position: absolute;
         }
         .arrow{
             position: relative;
-            // flex-direction: row;
-            // margin-left: 25px;
             align-self: center;
             bottom: 4px;
-            // right: 20%;
             left: 25px;
             font-size: 20px;
             width: 17.2px;

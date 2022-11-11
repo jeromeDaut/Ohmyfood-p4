@@ -20,7 +20,6 @@
     @extend %flex-center-column;
     border-radius: map-get($radius-btn, main-btn);
     background: linear-gradient($color-secondary, $color-primary);
-    // width: 50%;
     margin: 40px auto;
     width: 218px;
     height: 50px;
