@@ -47,7 +47,23 @@
     border-radius: map-get($radius-btn, cards-btn);
         &:hover{
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-         
+          .card__menu{
+            transition-duration: 600ms;
+
+            width: 90%;
+            border-radius: 15px 0 0 15px;
+
+
+          }
+          .card__checked{
+            transition-duration: 600ms;
+
+            visibility: inherit;
+            width: 20%;
+            i{
+                visibility: inherit;
+            }
+          }
         }
 }
 .card__menu{
@@ -59,15 +75,10 @@
     flex-direction: column;
     justify-content: space-evenly;    
     background: $white;
-    height: 70px;
     width: 100%;
-    z-index: 1;
+    height: 70px;
     transition-duration: 600ms;
-        &:hover{
-            width: 80%;
-            border-radius: 15px 0 0 15px;
-        }
-        
+
 }
 .card__title{
     margin: 0;
@@ -102,7 +113,6 @@
     right: 8%;
 }  
 .card__checked{
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,10 +122,15 @@
     font-weight: bold;
     font-size: 20px;
     height: 70px;
-    width: 20%;
-    // width: 0;
+    width: 0;
     right: 0;
-}
+    visibility: hidden;
+    transition-duration: 600ms;
+
+     i{
+        visibility: hidden;
+     }
+    }
 .btn-main{
     margin-top: 35px;
     @include btn-main;
