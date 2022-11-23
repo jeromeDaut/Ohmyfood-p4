@@ -49,21 +49,18 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
           .card__menu{
             transition-duration: 600ms;
-
-            width: 90%;
+            width: 80%;
             border-radius: 15px 0 0 15px;
-
-
-          }
+           }
           .card__checked{
             transition-duration: 600ms;
-
             visibility: inherit;
             width: 20%;
-            i{
-                visibility: inherit;
+                i{
+                    transition-delay: 200ms;
+                    visibility: inherit;
+                }
             }
-          }
         }
 }
 .card__menu{
@@ -123,14 +120,12 @@
     font-size: 20px;
     height: 70px;
     width: 0;
-    right: 0;
     visibility: hidden;
     transition-duration: 600ms;
-
      i{
         visibility: hidden;
      }
-    }
+}
 .btn-main{
     margin-top: 35px;
     @include btn-main;

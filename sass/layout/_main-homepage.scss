@@ -44,7 +44,7 @@
             font-size: 24px;
             font-weight: 700;
             font-style:normal ;
-            margin-top: 0;
+            margin: 0 17%;
             padding-top: 39px;
 
         }
@@ -75,12 +75,12 @@
         margin-bottom: 25px;
         font-weight: 500;
         font-size: 16px;
-        transition: $transition-btn;
+        transition: box-shadow $transition-btn;
         
     &:hover{
         background: $color-bg-functionning;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        transition-duration: $transition-btn;
+        transition:  $transition-btn ;
             i{
                 color: $color-primary;
             }            
@@ -150,7 +150,7 @@
     border-radius: map-get($radius-btn, index-btn);
     @include box-shadow; 
     width: 100%;
-    transition-duration: $transition-btn;
+    transition: box-shadow 600ms;
         &--img {
             border-radius: 15px 15px 0 0;
             object-fit: cover;
@@ -161,7 +161,7 @@
             position: relative;
         }
         &:hover{
-            transition: $transition-btn;
+            transform: scale(1);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 }
@@ -176,30 +176,31 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
         &--title {
-            margin: 5px;
+            margin: 5px 10px 0 15px;
             font-size: 18px;
         }
         &--localisation{
-            margin: 5px;
+            margin: 0 10px 5px 15px;
         }
 }
 // xxxx green new xxxxxxxxxxxx
 .card-new{
     position: absolute;
-    right: 10%;
-
-    border: 1px solid $color-font-news;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: $color-background-new;
     color: $color-font-news;
-
-    width: 25%;
-    max-width: 150px;
-    min-width: 70px;
+    text-align: center;
+    width: 80px;
     height: 29px;
-
-    padding: 12px 5px 5px 5px;  
 }
 
   

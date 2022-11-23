@@ -1,4 +1,6 @@
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 // tablet breakpoints 768px
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 @media screen and (min-width: 768px) {
     body{
         min-width: auto;
@@ -100,6 +102,16 @@
     .menu-card-container{
         width: 65%;
     }
+    .card__container{
+        &:hover{
+        .card__menu{
+            width: 85%;
+        }
+        .card__checked{
+            width: 15%;
+        }
+    }
+}
     
 }
 
@@ -144,13 +156,14 @@
     .functioning__content{
        width: 290px;
     }
+    
     // restaurants section
     
     .restaurants{
-        min-width: none;
         flex-wrap: nowrap;
         flex-direction: row;
         margin-top: 0;
+        overflow-x: hidden;
          &__title{
             font-size: 24px;
             text-align: center;
@@ -177,12 +190,25 @@
         margin-left: 35px;
 
     }
-    // restaurants pages
+    // xxxxxxxxxxxxxx
+    // restaurants
+    // xxxxxxxxxxxxxx
+    
     .restaurant-name{
         font-size: 37px;
     }
+    .card__container{
+        &:hover{
+        .card__menu{
+            width: 90%;
+        }
+        .card__checked{
+            width: 10%;
+        }
+    }
+}
     .arrow{
         font-size: 30px;
-        // top: 35px;
     }
+    
 }
