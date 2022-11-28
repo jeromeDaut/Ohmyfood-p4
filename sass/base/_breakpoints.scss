@@ -143,8 +143,12 @@
     .functioning{
         justify-content: center;
             &__title{
-                margin-right: 780px;
                 font-size: 24px;
+                // xxxxxxxxxxxxxxxxxx
+                margin-right: 780px;
+                // xxxxxxxxxxxxxxxxxx
+                // text-align: left;
+                // margin-left: 3.3%;
             }
     }
     .functioning__container{
@@ -166,22 +170,30 @@
         overflow-x: hidden;
          &__title{
             font-size: 24px;
-            text-align: center;
+            // xxxxxxxxxxxxxxxxxx
             margin-right: 835px;
+            // xxxxxxxxxxxxxxxxxx
+            // text-align: left;
+            // margin-left: 5%;
+
          }
     }
     .restaurants__container{
+        flex-wrap: nowrap;
+        // xxxxxxxxxxxxxxxxxxxxxxxx
         overflow: hidden;
         justify-content: center;
-        flex-wrap: nowrap;
         padding-left: 216px;
         box-sizing: content-box;
+        // xxxxxxxxxxxxxxxxxxxxxxxx
     }
     .figure__container{
         overflow: hidden;
         white-space: nowrap;
-       min-width: 320px;
-       max-width: 320px;
+        // xxxxxxxxxxxxxxxxxxxxxxxx
+        min-width: 320px;
+        max-width: 320px;
+        // xxxxxxxxxxxxxxxxxxxxxxxx
     }
     .footer-title{
         margin: 0 25px;
