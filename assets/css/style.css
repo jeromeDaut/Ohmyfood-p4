@@ -223,7 +223,7 @@ a {
   top: 0;
   margin: 0;
   padding: 0;
-  background: rgb(59, 59, 59);
+  background: #353535;
   opacity: 1;
   z-index: 99;
 }
@@ -271,7 +271,6 @@ a {
   border-radius: 50%;
   -webkit-animation: rotation-back 2000ms linear infinite;
           animation: rotation-back 2000ms linear infinite;
-  transform-origin: center;
 }
 
 .restaurant-name {
@@ -561,12 +560,12 @@ a {
 }
 .card__container:hover .card__checked {
   transition-duration: 600ms;
-  visibility: inherit;
+  visibility: visible;
   width: 20%;
 }
 .card__container:hover .card__checked i {
   transition-delay: 200ms;
-  visibility: inherit;
+  visibility: visible;
 }
 
 .card__menu {
@@ -585,17 +584,16 @@ a {
 
 .card__title {
   margin: 0;
-  width: 80%;
-  text-align: start;
+  width: 70%;
+  text-align: left;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .card__garnish {
-  display: inline-block;
   text-align: left;
   margin: 0;
   font-weight: 300;
@@ -877,8 +875,8 @@ footer {
     justify-content: center;
   }
   .functioning__title {
-    margin-right: 780px;
     font-size: 24px;
+    margin-right: 780px;
   }
   .functioning__container {
     justify-content: center;
@@ -897,13 +895,12 @@ footer {
   }
   .restaurants__title {
     font-size: 24px;
-    text-align: center;
     margin-right: 835px;
   }
   .restaurants__container {
+    flex-wrap: nowrap;
     overflow: hidden;
     justify-content: center;
-    flex-wrap: nowrap;
     padding-left: 216px;
     box-sizing: content-box;
   }
