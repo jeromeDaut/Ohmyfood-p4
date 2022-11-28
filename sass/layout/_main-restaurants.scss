@@ -47,18 +47,18 @@
     border-radius: map-get($radius-btn, cards-btn);
         &:hover{
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-          .card__menu{
-            transition-duration: 600ms;
+            .card__menu{
+            transition-duration: $transition-btn; //600ms
             width: 80%;
             border-radius: 15px 0 0 15px;
-           }
-          .card__checked{
-            transition-duration: 600ms;
-            visibility: inherit;
+            }
+            .card__checked{
+            transition-duration: $transition-btn; //600ms
+            visibility: visible;
             width: 20%;
                 i{
                     transition-delay: 200ms;
-                    visibility: inherit;
+                    visibility: visible;
                 }
             }
         }
@@ -79,17 +79,16 @@
 }
 .card__title{
     margin: 0;
-    width: 80%;
-    text-align: start;
+    width: 70%;
+    text-align: left;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 
 }
 .card__garnish{
-    display: inline-block;
     text-align: left;
     margin: 0;
     font-weight: 300;
